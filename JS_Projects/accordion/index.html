@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordio effect</title>
+    <style>
+        .content{
+            display:none;
+            padding:20px;
+            font-size: 0.8em;
+            border: 1px solid black;
+        }
+        .main{
+            font-size: 1.5em;
+            background-color: #ddd;
+            cursor:pointer
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae!
+    </div>
+    <div class="content">
+        Lorem ipsum dolor2222 sit amet consectetur adipisicing elit. Neque, inventore quod eaque consequatur incidunt quibusdam nulla blanditiis deserunt maxime eligendi ea dolores voluptatem, quo commodi molestiae accusamus exercitationem distinctio. Officia!
+    </div>
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae!
+    </div>
+    <div class="content">
+        Lorem ipsum dolor3333 sit amet consectetur adipisicing elit. Neque, inventore quod eaque consequatur incidunt quibusdam nulla blanditiis deserunt maxime eligendi ea dolores voluptatem, quo commodi molestiae accusamus exercitationem distinctio. Officia!
+    </div>
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae!
+    </div>
+    <div class="content">
+        Lorem ipsum dolor4444 sit amet consectetur adipisicing elit. Neque, inventore quod eaque consequatur incidunt quibusdam nulla blanditiis deserunt maxime eligendi ea dolores voluptatem, quo commodi molestiae accusamus exercitationem distinctio. Officia!
+    </div>
+    <script>
+        const mainele=document.querySelectorAll(".main")
+        const consele=document.querySelectorAll(".content")
+        for(let x=0; x<mainele.length; x++){
+            mainele[x].addEventListener("click",function(){
+                console.log(mainele[x].nextElementSibling)
+                clearActive();
+                mainele[x].nextElementSibling.classList.toggle("active")
+            })
+        }
+        function clearActive(){
+            for (let x=0;x<consele.length;x++){
+                consele[x].classList.remove("active")
+            }
+        }
+    </script>
+    
+</body>
+</html>
