@@ -1,0 +1,1 @@
+npm install uuid bootstrap reactstrap react-icons
