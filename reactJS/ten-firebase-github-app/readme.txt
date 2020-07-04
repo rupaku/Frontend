@@ -1,0 +1,1 @@
+npm install firebase axios bootstrap reactstrap react-router-dom react-toastify
