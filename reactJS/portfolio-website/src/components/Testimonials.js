@@ -1,6 +1,13 @@
 import React from "react"
+import OwlCarousel from "react-owl-carousel2"
+import "react-owl-carousel2/lib/styles.css"
 
 const Testimonials = () => {
+  const options = {
+    items: 1,
+    rewind: true,
+    autoplay: true,
+  }
   return (
     <section id="testimonials" className="testimonials section-bg">
       <div className="container">
@@ -14,7 +21,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="owl-carousel testimonials-carousel">
+        <OwlCarousel options={options}>
           <div className="testimonial-item" data-aos="fade-up">
             <p>
               <i className="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -116,7 +123,7 @@ const Testimonials = () => {
             <h3>John Larson</h3>
             <h4>Entrepreneur</h4>
           </div>
-        </div>
+        </OwlCarousel>
       </div>
     </section>
   )

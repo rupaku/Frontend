@@ -1,4 +1,5 @@
 import React from "react"
+import Typed from "react-typed"
 
 const Herosection = () => {
   return (
@@ -9,11 +10,18 @@ const Herosection = () => {
       <div className="hero-container" data-aos="fade-in">
         <h1>Alex Smith</h1>
         <p>
-          I'm
-          <span
+          I'm &nbsp;
+          <Typed
             className="typed"
-            data-typed-items="Designer, Developer, Freelancer, Photographer"
-          ></span>
+            strings={["Designer", "Freelancer", "Dancer", "Developer"]}
+            backDelay={2000}
+            typeSpeed={100}
+            backSpeed={70}
+            showCursor
+            shuffle
+            smartBackspace
+            loop
+          ></Typed>
         </p>
       </div>
     </section>
