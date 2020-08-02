@@ -1,10 +1,13 @@
 import React from "react"
+import data from "../data/Resume.json"
+import TitleBlock from "../blocks/TitleBlock"
+import ResumeBlock from "../blocks/ResumeBlock"
 
 const Resume = () => {
   return (
     <section id="resume" className="resume">
       <div className="container">
-        <div className="section-title">
+        {/* <div className="section-title">
           <h2>Resume</h2>
           <p>
             Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
@@ -13,7 +16,6 @@ const Resume = () => {
             fugiat sit in iste officiis commodi quidem hic quas.
           </p>
         </div>
-
         <div className="row">
           <div className="col-lg-6" data-aos="fade-up">
             <h3 className="resume-title">Sumary</h3>
@@ -113,6 +115,29 @@ const Resume = () => {
                 </li>
               </ul>
             </div>
+          </div>
+                  </div> */}
+
+        <TitleBlock data={data.heading} />
+        <div className="row">
+          <div className="col-lg-6" data-aos="fade-up">
+            <h3 className="resume-title">{data.summary.title}</h3>
+            <div className="resume-item pb-0">
+              <h4>{data.summary.details.name}</h4>
+              <p>
+                <em>{data.summary.details.description}</em>
+              </p>
+              <ul>
+                {data.summary.details.address.map((val, index) => (
+                  <li key={index}>{val}</li>
+                ))}
+              </ul>
+            </div>
+
+            <ResumeBlock data={data.body} flag={true} />
+          </div>
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <ResumeBlock data={data.career} flag={false} />
           </div>
         </div>
       </div>

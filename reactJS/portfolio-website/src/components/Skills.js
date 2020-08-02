@@ -1,8 +1,12 @@
 import React from "react"
 import ProgressBar from "react-bootstrap/ProgressBar"
+import data from "../data/skills.json"
+import TitleBlock from "../blocks/TitleBlock"
+import { Container } from "reactstrap"
+import SkillBlock from "../blocks/SkillBlock"
 
 const Skills = () => {
-  return (
+  /*return (
     <section id="skills" className="skills section-bg">
       <div className="container">
         <div className="section-title">
@@ -63,6 +67,14 @@ const Skills = () => {
           </div>
         </div>
       </div>
+    </section>
+  )  */
+  return (
+    <section id="skills" className="skills section-bg">
+      <Container>
+        <TitleBlock data={data.heading} />
+        <SkillBlock data={data.body} />
+      </Container>
     </section>
   )
 }
