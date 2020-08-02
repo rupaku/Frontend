@@ -28,3 +28,16 @@ const result = myNum.filter((num) => num != 21) //all num except 21
 console.log(result)
 
 // [ 34, 56, 78, 98 ]
+
+/* SLICE : slice(satrtindex, end-1)*/
+var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"]
+console.log(users.slice(1, 3)) //[ 'Tim', 'Ton' ]
+
+console.log(users.slice(1)) //[ 'Tim', 'Ton', 'Sam', 'Sor', 'Sod' ]
+
+/* splice(start index,count num,replace all matching with string) */
+users.splice(1, 2, "Hi")
+console.log(users) //[ 'Ted', 'Hi', 'Sam', 'Sor', 'Sod' ]
+
+users.splice(1, 3, "Hi", "Bye")
+console.log(users) //[ 'Ted', 'Hi', 'Bye', 'Sod' ]
