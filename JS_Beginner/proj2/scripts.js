@@ -4,6 +4,7 @@ var orange = document.querySelector(".orange")
 var pink = document.querySelector(".pink")
 
 var pink = document.querySelector(".center")
+console.log(window.getComputedStyle(red).backgroundColor)
 const getBGCOlor = (selectedElement) => {
   return window.getComputedStyle(selectedElement).backgroundColor
 }
